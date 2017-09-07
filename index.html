@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RPS Multiplayer</title>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/background.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <ul class="slideshow">
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <img src="assets/images/header.png">
+        <div class="greeting">
+            <form id="name-form">
+                <input type="text" id="name-input" placeholder="Name">
+                <input id="addName" type="submit" value="Start">
+            </form>
+        </div>
+        <div class="holder-box">
+            <div class="box player1">
+                <div class="waiting">
+                    <h1>Waiting for player 1</h1>
+                    <i class="fa fa-spinner fa-spin fa-one-large fa-fw"></i>
+                </div>
+                <div class="score score1"></div>
+                <div class="choices1"></div>
+            </div>
+            <div class="results"></div>
+            <div class="box player2">
+                <div class="waiting">
+                    <h1>Waiting for player 2</h1>
+                    <i class="fa fa-spinner fa-spin fa-one-large fa-fw"></i>
+                </div>
+                <div class="score score2"></div>
+                <div class="choices2"></div>
+            </div>
+        </div>
+        <div class="holder-messages">
+            <div id="messages"></div>
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Message">
+                <input id="addMessage" type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
